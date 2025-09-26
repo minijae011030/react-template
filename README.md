@@ -18,6 +18,7 @@ React + Vite + TypeScript + TailwindCSS + shadcn/ui 스타터 템플릿
 ## 🧰 사전 요구 사항
 
 • Node.js LTS (권장)
+
 • npm (또는 pnpm/yarn — 명령만 바꿔 사용)
 
 ## 🚀 시작하기 (초기 실행 방법)
@@ -102,3 +103,7 @@ npx shadcn@latest add button card dialog input label textarea tabs separator she
 ```
 
 - 라우트 추가 시 src/pages에 컴포넌트 생성 → router.tsx에 경로 등록
+
+## 📦 Version
+
+현재 템플릿 버전: **v1.0.0**
