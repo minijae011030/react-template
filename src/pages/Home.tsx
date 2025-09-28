@@ -181,7 +181,7 @@ function GettingStarted() {
         <div className="rounded-xl border border-white/10 bg-black/40 p-5">
           <h3 className="font-medium">Use this template</h3>
           <CodeBlock
-            code={`https://github.com/minijae011030/react-template.git
+            code={`git clone https://github.com/minijae011030/react-template.git
 cd react-template
 npm i
 npm run dev`}
