@@ -146,11 +146,15 @@ function Features() {
     </section>
   );
 }
-
 function CodeBlock({ code }: { code: string }) {
   return (
-    <div className="relative">
-      <pre className="mt-3 overflow-x-auto rounded-lg bg-black/60 p-4 text-sm">
+    // 부모는 컨테이너 폭에 맞추고, 가로 스크롤 담당
+    <div
+      className="relative w-full min-w-0 overflow-x-auto"
+      style={{ WebkitOverflowScrolling: "touch" }} // iOS 부드러운 스크롤
+    >
+      {/* 내용은 필요한 만큼 넓어지게 */}
+      <pre className="w-max max-w-none whitespace-pre rounded-lg bg-black/60 p-4 font-mono text-sm">
         {code}
       </pre>
     </div>
@@ -181,8 +185,8 @@ npm run format     # Prettier + Tailwind sort`;
   return (
     <section id="getting-started" className="mx-auto max-w-6xl px-6 py-14">
       <h2 className="mb-6 text-2xl font-semibold">Getting Started</h2>
-      <div className="grid gap-6 lg:grid-cols-2">
-        <div className="rounded-xl border border-white/10 bg-black/40 p-5">
+      <div className="grid min-w-0 gap-6">
+        <div className="min-w-0 rounded-xl border border-white/10 bg-black/40 p-5">
           <div className="flex items-center justify-between">
             <h3 className="font-medium">Use this template</h3>
             <button
@@ -194,7 +198,7 @@ npm run format     # Prettier + Tailwind sort`;
           </div>
           <CodeBlock code={code1} />
         </div>
-        <div className="rounded-xl border border-white/10 bg-black/40 p-5">
+        <div className="min-w-0 rounded-xl border border-white/10 bg-black/40 p-5">
           <div className="flex items-center justify-between">
             <h3 className="font-medium">Common Scripts</h3>
             <button
