@@ -38,7 +38,7 @@ cd <your-repo>
 #### Option B — Clone Directly
 
 ```bash
-git clone https://github.com/<your-id>/react-template.git
+git clone https://github.com/minijae011030/react-template.git
 cd react-template
 ```
 
@@ -88,12 +88,12 @@ src/
 
 ## ✨ Features
 
-- **TailwindCSS**: Extended colors/border radius, tailwindcss-animate plugin
-- **shadcn/ui**: Radix-based, accessible UI components
 - **React Router**: Basic routing setup
 - **ESLint + Prettier**: Includes prettier-plugin-tailwindcss for class sorting
 - **Vite**: Fast dev server & bundler
 - **Zustand** – Lightweight global state management with persistence (e.g. theme toggle)
+- **TailwindCSS**: Extended colors/border radius, tailwindcss-animate plugin
+- **shadcn/ui**: Radix-based, accessible UI components
 
 ## 📝 Notes
 
