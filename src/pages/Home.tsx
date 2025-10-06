@@ -83,7 +83,7 @@ function Hero() {
           <img src={react_logo} className="h-12" />
         </div>
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-          Ship fast with React, Vite, Zustand, Tailwind & shadcn/ui
+          Build faster with React & Vite.
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
           A batteries-included starter focused on speed, accessibility, and DX.
