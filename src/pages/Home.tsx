@@ -148,9 +148,29 @@ function Features() {
 }
 
 function CodeBlock({ code }: { code: string }) {
+  return (
+    <div className="relative">
+      <pre className="mt-3 overflow-x-auto rounded-lg bg-black/60 p-4 text-sm">
+        {code}
+      </pre>
+    </div>
+  );
+}
+
+function GettingStarted() {
   const { toast } = useToast();
 
-  const handleCopy = () => {
+  const code1 = `git clone https://github.com/minijae011030/react-template.git
+cd react-template
+npm i
+npm run dev`;
+
+  const code2 = `npm run build      # production build
+npm run preview    # preview the build
+npm run lint       # ESLint
+npm run format     # Prettier + Tailwind sort`;
+
+  const handleCopy = (code: string) => {
     navigator.clipboard.writeText(code);
     toast({
       description: "Copied to clipboard!",
@@ -159,42 +179,32 @@ function CodeBlock({ code }: { code: string }) {
   };
 
   return (
-    <div className="relative">
-      <pre className="mt-3 overflow-x-auto rounded-lg bg-black/60 p-4 text-sm">
-        {code}
-      </pre>
-      <button
-        onClick={handleCopy}
-        className="absolute right-2 top-2 rounded-md bg-white/10 p-1 hover:bg-white/20"
-      >
-        <Copy className="h-4 w-4 text-white" />
-      </button>
-    </div>
-  );
-}
-
-function GettingStarted() {
-  return (
     <section id="getting-started" className="mx-auto max-w-6xl px-6 py-14">
       <h2 className="mb-6 text-2xl font-semibold">Getting Started</h2>
       <div className="grid gap-6 lg:grid-cols-2">
         <div className="rounded-xl border border-white/10 bg-black/40 p-5">
-          <h3 className="font-medium">Use this template</h3>
-          <CodeBlock
-            code={`git clone https://github.com/minijae011030/react-template.git
-cd react-template
-npm i
-npm run dev`}
-          />
+          <div className="flex items-center justify-between">
+            <h3 className="font-medium">Use this template</h3>
+            <button
+              onClick={() => handleCopy(code1)}
+              className="rounded-md bg-white/10 p-1 hover:bg-white/20"
+            >
+              <Copy className="h-4 w-4 text-white" />
+            </button>
+          </div>
+          <CodeBlock code={code1} />
         </div>
         <div className="rounded-xl border border-white/10 bg-black/40 p-5">
-          <h3 className="font-medium">Common Scripts</h3>
-          <CodeBlock
-            code={`npm run build      # production build
-npm run preview    # preview the build
-npm run lint       # ESLint
-npm run format     # Prettier + Tailwind sort`}
-          />
+          <div className="flex items-center justify-between">
+            <h3 className="font-medium">Common Scripts</h3>
+            <button
+              onClick={() => handleCopy(code2)}
+              className="rounded-md bg-white/10 p-1 hover:bg-white/20"
+            >
+              <Copy className="h-4 w-4 text-white" />
+            </button>
+          </div>
+          <CodeBlock code={code2} />
         </div>
       </div>
     </section>
