@@ -194,14 +194,13 @@ function Features() {
 /* ---------------- CODE BLOCK ---------------- */
 function CodeBlock({ code }: { code: string }) {
   return (
-    <div className="relative w-full min-w-0 overflow-x-auto">
-      <pre className="mt-2 w-full rounded-lg bg-muted p-4 font-mono text-sm">
+    <div className="relative w-full overflow-x-auto">
+      <pre className="mt-2 w-max min-w-full rounded-lg bg-muted p-4 font-mono text-sm">
         {code}
       </pre>
     </div>
   );
 }
-
 /* ---------------- GETTING STARTED ---------------- */
 function GettingStarted() {
   const { toast } = useToast();
