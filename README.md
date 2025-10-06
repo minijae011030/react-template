@@ -1,6 +1,6 @@
 # React + Vite Template
 
-React + Vite + TypeScript + TailwindCSS + shadcn/ui starter template.
+React + Vite + TypeScript + Zustand + TailwindCSS + shadcn/ui starter template.
 
 ## ⚙️ Tech Stack & Versions
 
@@ -9,6 +9,7 @@ React + Vite + TypeScript + TailwindCSS + shadcn/ui starter template.
 | React            | ^19.1.1 |
 | TypeScript       | ~5.8.3  |
 | Vite             | ^7.1.7  |
+| Zustand          | ^5.0.8  |
 | TailwindCSS      | ^3.4.17 |
 | shadcn           | ^3.3.1  |
 | React Router DOM | ^7.9.2  |
@@ -79,6 +80,7 @@ src/
 ├─ components/
 │  └─ ui/                # shadcn components (button, card, dialog, etc.)
 ├─ pages/                # Route pages (Home, About, Playground)
+├─ store/                # Zustand stores (e.g., theme, user)
 ├─ router.tsx            # react-router-dom router
 ├─ main.tsx              # Entry point
 └─ index.css             # Tailwind entry
@@ -91,6 +93,7 @@ src/
 - **React Router**: Basic routing setup
 - **ESLint + Prettier**: Includes prettier-plugin-tailwindcss for class sorting
 - **Vite**: Fast dev server & bundler
+- **Zustand** – Lightweight global state management with persistence (e.g. theme toggle)
 
 ## 📝 Notes
 
